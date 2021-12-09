@@ -23,6 +23,9 @@ var corsOptionsDelegate = function (req, callback) {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
+app.get('/',cors(corsOptionsDelegate), (req, res) => {
+    res.send(`Add '/crypto' at end of url only fetch top 10 cuz of recent changes`)
+})
 
 app.get('/crypto', cors(corsOptionsDelegate), (req, res) => {
     var data = {};
